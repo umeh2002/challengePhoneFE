@@ -29,6 +29,13 @@ const Create = () => {
     }
   };
 
+  const validateInput = (e: any) => {
+    const input = e.target;
+    const inputValue = input.value;
+
+    input.value = inputValue.replace(/\D/g, "");
+  };
+
   const {
     reset,
     handleSubmit,
@@ -116,6 +123,8 @@ const Create = () => {
               placeholder="enter contact number"
               className="w-full h-[40px] rounded-sm outline-none border pl-[10px]"
               {...register("phoneNumber")}
+              onInput={validateInput}
+              maxLength={11}
             />
             {errors.phoneNumber && (
               <div className="text-[12px] text-red-500 flex justify-end">
