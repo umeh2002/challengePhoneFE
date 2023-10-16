@@ -5,7 +5,7 @@ export const useGetContact = () => {
   const { data:allContact } = useQuery({
     queryKey: ["getContact"],
     queryFn: getContact,
-    // refetchInterval:1000
+    refetchInterval:1000
   });
 
   return { allContact };
