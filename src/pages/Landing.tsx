@@ -11,9 +11,13 @@ const Landing = () => {
 
   const { allContact } = useGetContact();
 
-//   const filteredContacts = allContact.filter((contact: any) =>
-//   contact.category.toLowerCase().includes(state.toLowerCase())
-// );
+  let filteredContacts = [];
+
+  if (allContact) {
+    filteredContacts = allContact.filter((contact: any) =>
+      contact.category.includes(state.toLowerCase())
+    );
+  }
 
  
   return (
@@ -39,7 +43,7 @@ const Landing = () => {
       </div>
 
       <div className="flex flex-wrap">
-        {allContact?.map((props: any) => (
+        {filteredContacts?.map((props: any) => (
           <div
             className="w-[300px] h-[100px] border rounded-md bg-white shadow-sm p-2 flex items-center m-2"
             key={props.id}

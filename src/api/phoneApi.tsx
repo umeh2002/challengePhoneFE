@@ -10,6 +10,7 @@ export const createContact = async (data: any) => {
     return await axios
       .post(`${url}/create-contact`, data, config)
       .then((res: any) => {
+        // console.log(res.data.data)
         return res.data.data;
       });
   } catch (error) {
