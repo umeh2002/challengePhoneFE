@@ -19,7 +19,7 @@ export const createContact = async (data: any) => {
 
 export const getContact = async () => {
   try {
-    return await axios.get(`http://localhost:3637/api/get-contact`).then((res: any) => {
+    return await axios.get(`https://challenge-phone-contact.onrender.com/api/get-contact`).then((res: any) => {
       return res.data.data;
       // console.log("res",res.data.data)
     });
