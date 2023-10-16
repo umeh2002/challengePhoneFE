@@ -19,6 +19,12 @@ const Landing = () => {
     );
   }
 
+  const validateInput = (e: any) => {
+    const input = e.target;
+    const inputValue = input.value;
+
+    input.value = inputValue.replace(/\D/g, "");
+  };
  
   return (
     <div className="bg-red-50 h-[100vh] small:w-full small:h-[100vh] ">
@@ -27,6 +33,8 @@ const Landing = () => {
           type="text"
           placeholder="search category"
           className="w-[300px] h-[40px] rounded-md border pl-3 outline-none mt-3"
+          onInput={validateInput}
+          maxLength={11}
           onChange={(e: any) => {
             setState(e.target.value);
           }}
