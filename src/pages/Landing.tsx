@@ -21,7 +21,7 @@ const Landing = () => {
  
   return (
     <div className="bg-red-50 h-[100vh] small:w-full small:h-[100vh] ">
-      <div className="flex items-center ml-2">
+      <div className="flex items-center  ml-2 small:w-full">
         <input
           type="text"
           placeholder="search category"
@@ -60,7 +60,7 @@ const Landing = () => {
           </div>
         ))}
       </div>
-      <div className="flex w-full h-[70px] bg-red-400 medium:hidden small:flex mt-[820px] rounded-b-xl items-center pl-2 justify-between pr-2">
+      <div className="flex w-full small:w-full h-[70px] bg-red-400 medium:hidden small:flex mt-[450px]  items-center pl-2 justify-between pr-2">
         <Link to="/create-contact">
           <div className="text-[40px] hover:cursor-pointer transition-all duration-300">
             <MdCreateNewFolder />
